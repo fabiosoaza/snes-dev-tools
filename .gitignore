@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Snes Compiled Executables
+*.FIG
+*.SMC
+*.smc
+*.fig
+*.bin
+
+#Snes vram files
+*.cgr
+*.vra
+*.link

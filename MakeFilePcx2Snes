@@ -1,0 +1,9 @@
+PROJ_NAME=pcx2snes
+SOURCES=pcx2snes.c
+OBJECTS=pcx2snes.o
+CC=gcc
+
+all: $(PROJ_NAME)
+
+$(PROJ_NAME): $(SOURCES)	 
+	$(CC) -o $(PROJ_NAME) $(SOURCES) -I.
