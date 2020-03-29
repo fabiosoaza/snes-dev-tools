@@ -94,7 +94,7 @@ function install(){
 }
 
 function build_and_push_image(){
-    IMAGE_NAME="fabiosoaza/$(grep \"${1}\" build.properties | grep version | cut -d'=' -f2):$(get_artifact_version)"
+    IMAGE_NAME="fabiosoaza/$(grep \"${1}\" build.properties | grep project.name | cut -d'=' -f2):$(get_artifact_version)"
     TAG_NAME="${IMAGE_NAME}"
     echo "Building image $IMAGE_NAME"
     docker build . -f Dockerfile -t $IMAGE_NAME
