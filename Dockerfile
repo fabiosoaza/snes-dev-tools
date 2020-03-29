@@ -40,4 +40,22 @@ WORKDIR $TMP
 RUN git clone https://github.com/NewLunarFire/png2snes.git
 RUN cd png2snes && make
 RUN cp /tmp/png2snes/png2snes /usr/bin/png2snes
+
+WORKDIR $TMP
+#pvsneslib
+#bin2txt
+RUN git clone https://github.com/fabiosoaza/pvsneslib.git
+RUN cd /tmp/pvsneslib && git checkout fix_linux_issues && cd tools/bin2txt/ && make &&  cp bin2txt.exe /usr/local/bin/bin2txt
+#constify
+RUN cd /tmp/pvsneslib && git checkout fix_linux_issues && cd tools/constify/ && make &&  cp constify.exe /usr/local/bin/constify
+
+#gfx2snes
+RUN cd /tmp/pvsneslib  && git checkout fix_linux_issues && cd tools/gfx2snes/ && make &&  cp gfx2snes.exe /usr/local/bin/gfx2snes
+
+#smconv
+RUN cd /tmp/pvsneslib  && git checkout fix_linux_issues && cd tools/smconv/ && make &&  cp smconv.exe /usr/local/bin/smconv
+
+#snestools
+RUN cd /tmp/pvsneslib  && git checkout fix_linux_issues && cd tools/snestools/ && make &&  cp snestools.exe /usr/local/bin/snestools
+
 CMD sleep 600 
