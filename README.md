@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/fabiosoaza/snes-dev-tools.svg?branch=master)](https://travis-ci.org/fabiosoaza/snes-dev-tools) 
 <br/>Docker image containing tools to develop Snes Games.
 <br/>The tools included in the image are:
+- cc65- https://github.com/cc65/cc65
 - WLA DX Assembler- https://github.com/vhelin/wla-dx
 - Pcx2Snes - https://github.com/gilligan/snesdev/tree/master/tools/pcx2snes
 - SuperFamicheck - https://github.com/Optiroc/SuperFamicheck
