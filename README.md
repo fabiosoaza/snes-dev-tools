@@ -12,4 +12,5 @@
   - gfx2snes
   - smconv
   - snestools
-  
+
+<br/> Small examples of games built using this image can be found at https://github.com/fabiosoaza/snes-dev-tools-examples 
