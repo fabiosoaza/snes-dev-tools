@@ -8,6 +8,7 @@ ENV WLA_TMP_SOURCE_PATH $TMP/wla-dx
 ENV WLA_TMP_ROOT_BUILD_PATH $WLA_TMP_SOURCE_PATH/build-wla
 ENV MAKE_TYPE Unix Makefiles
 ENV PCX2SNES_PATH /opt/pcx2snes
+ENV CC65_PATH /opt/cc65
 
 WORKDIR $TMP
 
@@ -40,6 +41,12 @@ WORKDIR $TMP
 RUN git clone https://github.com/NewLunarFire/png2snes.git
 RUN cd png2snes && make
 RUN cp /tmp/png2snes/png2snes /usr/bin/png2snes
+
+WORKDIR $TMP
+#cc65
+RUN mkdir -p $CC65_PATH
+RUN git clone https://github.com/cc65/cc65.git $CC65_PATH
+RUN cd $CC65_PATH && make && make avail
 
 WORKDIR $TMP
 #pvsneslib
